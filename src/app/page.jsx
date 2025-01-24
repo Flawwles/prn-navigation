@@ -19,7 +19,7 @@ export default function HomePage() {
         <meta property="twitter:image" content="https://prn-navigation.vercel.app/cover.png" />
       </Head>
       <div className="flex flex-1 flex-col gap-4 p-8">
-        <h1 className="text-2xl font-bold">Dashboard</h1>
+        <h1 className="text-2xl font-bold">Dashboard here</h1>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-xl bg-muted/50 p-4 aspect-square" />
           <div className="rounded-xl bg-muted/50 p-4 aspect-square" />
