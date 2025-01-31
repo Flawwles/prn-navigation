@@ -31,7 +31,8 @@ export function NavMain({ items }) {
     // For parent items with subitems
     if (item.items) {
       const basePath = item.title.toLowerCase();
-      return pathname.startsWith(`/${basePath}/`);
+      // Check if the pathname starts with the base path or is exactly the base path
+      return pathname.startsWith(`/${basePath}/`) || pathname === `/${basePath}`;
     }
 
     // For items without subitems or subitems themselves
@@ -85,7 +86,7 @@ export function NavMain({ items }) {
                           <SidebarMenuSubItem key={subItem.title}>
                             <SidebarMenuSubButton 
                               asChild
-                              isActive={subItem.url === pathname}
+                              isActive={subItem.url === pathname || pathname.startsWith(subItem.url + '/')}
                             >
                               <Link href={subItem.url}>
                                 <span>{subItem.title}</span>

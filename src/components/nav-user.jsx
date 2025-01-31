@@ -132,6 +132,10 @@ export function NavUser({
                 {/* <CreditCard /> */}
                 Manage fax and email lists
               </DropdownMenuItem>
+              <DropdownMenuItem>
+                {/* <CreditCard /> */}
+                Manage contacts
+              </DropdownMenuItem>
               {/* <DropdownMenuItem>
                
                 Order history and status
