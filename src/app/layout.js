@@ -3,7 +3,7 @@ import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 import './globals.css';
 import '@/styles/fonts.css';
 
-export const metadata = {
+const metadata = {
   title: 'PRN Navigation Demo',
   description:
     'A prototype for PRN navigation to gather feedback and demo UI patterns',
@@ -26,6 +26,8 @@ export const metadata = {
     ],
   },
 };
+
+export { metadata };
 
 export default function RootLayout({ children }) {
   return (

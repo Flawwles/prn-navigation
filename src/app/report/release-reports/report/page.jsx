@@ -11,7 +11,7 @@ export default function ReleaseReportsPage() {
 
   return (
     <div className="grid grid-cols-[250px_1fr]">
-      <div className="bg-neutral-50 h-screen border-r">
+      <div className=" h-screen border-r">
 
       <SidebarGroup>
         <SidebarMenu>

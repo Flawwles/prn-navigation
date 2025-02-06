@@ -46,16 +46,8 @@ export function NavUser({
 
   return (
     (<SidebarMenu>
-      <DropdownMenuGroup className="mb-4">
       
       <SidebarMenuItem>
-        <SidebarMenuButton>
-          <Bell /> <span className="group-data-[collapsible=icon]:hiden">Notifications</span></SidebarMenuButton>
-        <SidebarMenuButton><CircleHelp /><span className="group-data-[collapsible=icon]:hiden">Help and support</span></SidebarMenuButton>
-      </SidebarMenuItem>
-      </DropdownMenuGroup>
-      <SidebarMenuItem>
-        
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <SidebarMenuButton
