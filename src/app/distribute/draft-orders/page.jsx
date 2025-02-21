@@ -9,7 +9,7 @@ export default function OrderDraftsPage() {
           Order drafts goes here
 
           <div className="pt-6">
-           <div className="bg-blue-50 p-5">Still working on the content? Checkout <Link href="/create/drafts" className="text-blue-700 underline">content drafts</Link>? </div>
+           <div className="bg-blue-50 p-5">Still working on the content? Checkout <Link href="/create/drafts" className="text-blue-700 underline">content drafts</Link></div>
           </div>
 
 
