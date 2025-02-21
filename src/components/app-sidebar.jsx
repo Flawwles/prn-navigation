@@ -122,6 +122,10 @@ const data = {
           url: "/report/release-reports",
         },
         {
+          title: "Account performance",
+          url: "/report/account-performance",
+        },
+        {
           title: "Broadcast reports",
           url: "/report/broadcast-reports",
         },
