@@ -93,7 +93,7 @@ const data = {
           url: "/create/upload",
         },
         {
-          title: "Drafts",
+          title: "Draft Content",
           url: "/create/drafts",
           count: 15
         },
@@ -106,6 +106,10 @@ const data = {
         {
           title: "Send Release",
           url: "/distribute/send-release",
+        },
+        {
+          title: "Draft orders",
+          url: "/distribute/draft-orders",
         },
         {
           title: "Orders and Approvals",
