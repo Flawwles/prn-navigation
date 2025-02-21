@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSidebar } from "@/components/ui/sidebar";
@@ -57,6 +57,7 @@ export function NavMain({ items }) {
                   >
                     {item.icon && <item.icon />}
                     <span>{item.title}</span>
+                    
                   </SidebarMenuButton>
                 </Link>
               ) : isCollapsed && item.items ? (
@@ -90,6 +91,7 @@ export function NavMain({ items }) {
                             >
                               <Link href={subItem.url}>
                                 <span>{subItem.title}</span>
+                                {subItem.url === "/report/knowledge-base" && <ExternalLink className='stroke-gray-600' />}
                                 {subItem.count && <SidebarMenuBadge className="bg-blue-100 text-blue-900">{subItem.count}</SidebarMenuBadge>}
                               </Link>
                             </SidebarMenuSubButton>

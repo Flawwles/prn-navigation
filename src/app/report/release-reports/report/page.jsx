@@ -31,6 +31,7 @@ export default function ReleaseReportsPage() {
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton tooltip={item.title} isActive={item.active}>
                 <span>{item.title}</span>
+                
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}

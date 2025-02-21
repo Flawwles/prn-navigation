@@ -4,7 +4,8 @@ import * as React from "react"
 import {
   CirclePlus,
   Bell,
-  CircleHelp
+  CircleHelp,
+  ExternalLink
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -134,7 +135,7 @@ const data = {
           url: "/report/report-settings",
         },
         {
-          title: "Knowledge base",
+          title: "Help",
           url: "/report/knowledge-base",
         },
       ],
