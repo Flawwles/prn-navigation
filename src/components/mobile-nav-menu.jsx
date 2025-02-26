@@ -15,8 +15,24 @@ import {
 } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
 
-export function MobileNavMenu({ item, isActive, pathname }) {
+export function MobileNavMenu({ item, isActive, pathname, onSubItemClick }) {
   const [open, setOpen] = React.useState(false)
+
+  const handleItemClick = (subItem) => {
+    // Check if this needs special handling
+    if (onSubItemClick && onSubItemClick(subItem)) {
+      setOpen(false)
+      return
+    }
+    
+    // Default behavior - close popover
+    setOpen(false)
+  }
+
+  // Helper function to determine if an item needs special handling
+  const needsSpecialHandling = (subItem) => {
+    return (subItem.title === "Create new release" || subItem.title === "Send Release")
+  }
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -43,23 +59,42 @@ export function MobileNavMenu({ item, isActive, pathname }) {
       <PopoverContent className="w-56 p-1" side="right" align="start">
         <nav className="flex flex-col gap-1">
           {item.items.map((subItem) => (
-            <Link
-              key={subItem.title}
-              href={subItem.url}
-              onClick={() => setOpen(false)}
-              className={cn(
-                "flex items-center justify-between rounded-md px-2 py-1.5 text-sm outline-none transition-colors",
-                subItem.url === pathname && "bg-accent font-medium text-accent-foreground",
-                "hover:bg-accent hover:text-accent-foreground"
-              )}
-            >
-              <span>{subItem.title}</span>
-              {subItem.count && (
-                <span className="ml-2 rounded bg-primary/10 px-1.5 py-0.5 text-xs font-medium text-primary">
-                  {subItem.count}
-                </span>
-              )}
-            </Link>
+            needsSpecialHandling(subItem) ? (
+              <button
+                key={subItem.title}
+                onClick={() => handleItemClick(subItem)}
+                className={cn(
+                  "flex items-center justify-between rounded-md px-2 py-1.5 text-sm outline-none transition-colors text-left w-full",
+                  subItem.url === pathname && "bg-accent font-medium text-accent-foreground",
+                  "hover:bg-accent hover:text-accent-foreground"
+                )}
+              >
+                <span>{subItem.title}</span>
+                {subItem.count && (
+                  <span className="ml-2 rounded bg-primary/10 px-1.5 py-0.5 text-xs font-medium text-primary">
+                    {subItem.count}
+                  </span>
+                )}
+              </button>
+            ) : (
+              <Link
+                key={subItem.title}
+                href={subItem.url}
+                onClick={() => setOpen(false)}
+                className={cn(
+                  "flex items-center justify-between rounded-md px-2 py-1.5 text-sm outline-none transition-colors",
+                  subItem.url === pathname && "bg-accent font-medium text-accent-foreground",
+                  "hover:bg-accent hover:text-accent-foreground"
+                )}
+              >
+                <span>{subItem.title}</span>
+                {subItem.count && (
+                  <span className="ml-2 rounded bg-primary/10 px-1.5 py-0.5 text-xs font-medium text-primary">
+                    {subItem.count}
+                  </span>
+                )}
+              </Link>
+            )
           ))}
         </nav>
       </PopoverContent>

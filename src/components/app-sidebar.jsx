@@ -85,13 +85,13 @@ const data = {
       icon: CirclePlus,
       items: [
         {
-          title: "Create with AI",
+          title: "Create new release",
           url: "/create/ai",
         },
-        {
-          title: "Upload and edit with AI",
-          url: "/create/upload",
-        },
+        // {
+        //   title: "Upload and edit with AI",
+        //   url: "/create/upload",
+        // },
         {
           title: "Draft Content",
           url: "/create/drafts",
