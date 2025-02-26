@@ -51,9 +51,9 @@ export function SendReleaseModal({ isOpen, onClose }) {
 
         <Label htmlFor="r1" className="flex flex-row gap-4 items-center p-4 h-auto border rounded-lg cursor-pointer hover:bg-accent">
             <RadioGroupItem value="new" id="r1" />
-            <div className="flex flex-col">
-              <span className="font-semibold block mb-2">No, start new</span>
-              <span className="text-xs text-muted-foreground">Start from scratch</span>
+            <div className="flex flex-col items-center">
+              <span className="font-semibold block">No, start new</span>
+              {/* <span className="text-xs text-muted-foreground">Start from scratch</span> */}
             </div>
           </Label>
           
@@ -61,15 +61,15 @@ export function SendReleaseModal({ isOpen, onClose }) {
             <RadioGroupItem value="saved" id="r2" />
             <div className="flex flex-col">
               <span className="font-semibold block mb-2">Yes, used saved distribution</span>
-              <span className="text-xs text-muted-foreground">Continue working on a previously saved distribution order.</span>
-              <div className="pt-2">
+              {/* <span className="text-xs text-muted-foreground">Continue working on a previously saved distribution order.</span> */}
+              <div className="pt-2 w-72">
                 <Select>
-                  <SelectTrigger className="w-full">
+                  <SelectTrigger >
                     <SelectValue placeholder="Select saved distribution" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectLabel>Fruits</SelectLabel>
+                      
                       <SelectItem value="apple">PRN Media Release</SelectItem>
                       <SelectItem value="banana">PRN CEO Interview</SelectItem>
                       <SelectItem value="blueberry">Generic Media Release</SelectItem>
