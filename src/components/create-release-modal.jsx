@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
+import Link from "next/link"
 
 
 export function CreateReleaseModal({ isOpen, onClose }) {
@@ -52,6 +53,15 @@ export function CreateReleaseModal({ isOpen, onClose }) {
               <span className="font-semibold block">Enhance an existing release</span>
               <span className="text-xs text-muted-foreground">Upload your release, then refine your content with Al-driven insights before distribution.</span>
             </div>
+          </div>
+
+          <div 
+            onClick={handleUpload} 
+            className="flex flex-col h-auto"
+          >
+           
+              <span className="text-sm text-muted-foreground">Already have your content ready to go? <Link href="/distribute" className="text-blue-500">Distribute instead.</Link></span>
+           
           </div>
         </div>
       </DialogContent>
