@@ -87,13 +87,13 @@ const data = {
         {
           title: "Create new release",
           url: "/create/ai",
-        },
+        },  
         // {
         //   title: "Upload and edit with AI",
         //   url: "/create/upload",
         // },
         {
-          title: "Draft Content",
+          title: "Content Drafts",
           url: "/create/drafts",
           count: 15
         },
@@ -108,7 +108,7 @@ const data = {
           url: "/distribute/send-release",
         },
         {
-          title: "Draft orders",
+          title: "Order Drafts",
           url: "/distribute/draft-orders",
         },
         {
